@@ -2,7 +2,7 @@
 <launch>
   <include file="$(find simple_diff_drive_simulator)/launch/robot_simulation.launch" />
 
-  <node name="room_circuite_controller" pkg="room_circuit_controller" type="room_circuit_controller" output="screen">
+  <node name="room_circuit_controller" pkg="room_circuit_controller" type="room_circuit_controller" output="screen">
     <param name="velocity" value="0.5" />
     <param name="angular_velocity" value="1.57" />
     <param name="avoid_distance" value="0.5" />
