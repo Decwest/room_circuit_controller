@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find simple_diff_drive_simulator)/launch/robot_simulation.launch" />
+
+  <node name="room_circuite_controller" pkg="room_circuit_controller" type="room_circuit_controller" output="screen">
+    <param name="velocity" value="0.5" />
+    <param name="angular_velocity" value="1.57" />
+    <param name="avoid_distance" value="0.5" />
+    <param name="avoid_angle" value="90" />
+    <remap from="cmd_vel" to="/diff_drive_controller/cmd_vel" />
+  </node>
+
+</launch>
